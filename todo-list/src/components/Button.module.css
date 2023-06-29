@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 1rem;
+
+  background-color: var(--blue-dark);
+  color: white;
+
+  border-radius: 8px;
+  border: none;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  border-color: solid 1px var(--purple);
+  outline:var(--purple) ;
+}
