@@ -16,32 +16,37 @@ main {
   width: 100%;
 }
 
-.taskContainer {
-  /* display: flex; */
+.taskWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
   width: 100%;
 }
 
-.taskContainerTitleWrapper {
+.taskWrapperTitleWrapper {
   display: flex;
   justify-content: space-between;
+  align-self: stretch;
 }
 
-.taskContainerTitleWrapper strong {
+.taskWrapperTitleWrapper strong {
   font-size: 0.875rem;
 }
 
-.taskContainerTitleWrapper span {
+.taskWrapperTitleWrapper span {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.taskContainerTitleWrapper span:first-child strong {
+.taskWrapperTitleWrapper span:first-child strong {
   color: var(--blue);
 }
 
-.taskContainerTitleWrapper span:last-child strong {
+.taskWrapperTitleWrapper span:last-child strong {
   color: var(--purple);
 }
 
@@ -54,4 +59,29 @@ main {
   border-radius: 62.4375rem;
 
   font-size: 0.75rem;
+}
+
+.empetyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 1rem;
+
+  padding: 4rem 1.5rem;
+
+  border-radius: 0.5rem;
+  border-top: 1px solid var(--gray-400);
+}
+
+.empetyContainer span {
+  color: var(--gray-300);
+
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+.empetyContainer span p:first-child {
+  font-weight: 700;
 }

@@ -1,8 +1,9 @@
 import { PlusCircle } from 'phosphor-react'
 
 import styles from './App.module.css'
-
 import './global.css'
+
+import clipBoard from './assets/Clipboard.png'
 
 import { Header } from './components/Header'
 import { Input } from './components/Input'
@@ -21,8 +22,8 @@ function App() {
             <PlusCircle size={24} color='#F2F2F2' ></PlusCircle>
           </Button>
         </form>
-        <section className={styles.taskContainer}>
-          <span className={styles.taskContainerTitleWrapper}>
+        <section className={styles.taskWrapper}>
+          <span className={styles.taskWrapperTitleWrapper}>
             <span>
               <strong>Tarefas criadas</strong>
               <span className={styles.counter}>
@@ -38,6 +39,13 @@ function App() {
               </span>
             </span>
           </span>
+          <div className={styles.empetyContainer}>
+            <img src={clipBoard} alt="" />
+            <span>
+              <p>Você ainda não tem tarefas cadastradas</p>
+              <p>Crie tarefas e organize seus itens a fazer</p>
+            </span>
+          </div>
         </section>
       </main>
     </>
