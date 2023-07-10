@@ -59,6 +59,7 @@ main {
   border-radius: 62.4375rem;
 
   font-size: 0.75rem;
+  font-weight: 700;
 }
 
 .empetyContainer {
@@ -84,4 +85,11 @@ main {
 
 .empetyContainer span p:first-child {
   font-weight: 700;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 0.75rem;
 }
