@@ -36,14 +36,31 @@
   border: 2px solid var(--blue);
 }
 
-.isChecked span {
+.task span:nth-child(2) {
+  flex: 1 0 0;
+
+  color: var(--gray-100, #F2F2F2);
+
+  font-size: 0.875rem;
+  line-height: 140%;
+}
+
+.taskConluded {
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray-500);
+  background: var(--gray-500);
+
+  opacity: 0.8;
+}
+
+.taskConluded .checkbox span {
   position: relative;
 
   border: none;
   background-color: var(--purple);
 }
 
-.isChecked span::after {
+.taskConluded .checkbox span::after {
   content: "✓";
 
   position: absolute;
@@ -53,11 +70,7 @@
   color: white;
 }
 
-.task span:nth-child(2) {
-  flex: 1 0 0;
-
-  color: var(--gray-100, #F2F2F2);
-
-  font-size: 0.875rem;
-  line-height: 140%;
+.taskConluded span:nth-child(2) {
+  color: var(--gray-300);
+  text-decoration-line: line-through;
 }

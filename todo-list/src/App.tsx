@@ -1,5 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from 'react'
-import { PlusCircle, Trash } from 'phosphor-react'
+import { PlusCircle } from 'phosphor-react'
 
 import styles from './App.module.css'
 import './global.css'
@@ -17,11 +17,11 @@ export interface TaskType {
 }
 
 function App() {
+  const [tasks, setTasks] = useState<TaskType[]>([])
   const [task, setTask] = useState({
     title: '',
     isConcluded: false
   })
-  const [tasks, setTasks] = useState<TaskType[]>([])
 
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setTask({ ...task, ['title']: event.target.value })
@@ -67,7 +67,7 @@ function App() {
           <Input placeholder='Adicione uma nova tarefa' value={task.title} onChange={e => handleChange(e)} />
           <Button>
             Criar
-            <PlusCircle size={24} color='#F2F2F2' ></PlusCircle>
+            <PlusCircle size={15} color='#F2F2F2' ></PlusCircle>
           </Button>
         </form>
         <section className={styles.taskWrapper}>
@@ -107,7 +107,7 @@ function App() {
               {
                 sortedTasks.map((item, index) => (
                   <Task
-                    key={item.title}
+                    key={`${item.title}_${index}`}
                     title={item.title}
                     isConcluded={item.isConcluded}
                     handleChecked={() => handleCheck(index)}
